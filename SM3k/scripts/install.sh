@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_DIR="/opt/smoker"
+REPO_DIR="/opt/SM3k"
 ENV_DIR="$REPO_DIR/.venv"
-CONF_DIR="/etc/smoker"
-DATA_DIR="/var/lib/smoker"
+CONF_DIR="/etc/SM3k"
+DATA_DIR="/var/lib/SM3k"
 UNIT="/etc/systemd/system/smoker.service"
 
 sudo mkdir -p "$REPO_DIR" "$CONF_DIR" "$DATA_DIR"
@@ -32,10 +32,10 @@ Wants=network-online.target
 
 [Service]
 User=%i
-WorkingDirectory=/opt/smoker
-EnvironmentFile=/etc/smoker/.env
-Environment="PYTHONPATH=/opt/smoker"
-ExecStart=/opt/smoker/.venv/bin/python -m smoker.main --config /etc/smoker/smoker.yaml --data /var/lib/smoker
+WorkingDirectory=/opt/SM3k
+EnvironmentFile=/etc/SM3k/.env
+Environment="PYTHONPATH=/opt/SM3k"
+ExecStart=/opt/SM3k/.venv/bin/python -m smoker.main --config /etc/SM3k/smoker.yaml --data /var/lib/SM3k
 Restart=always
 RestartSec=2
 Nice=-10

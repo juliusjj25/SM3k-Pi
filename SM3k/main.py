@@ -13,7 +13,7 @@ from smoker.config import load as load_cfg
 def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="smoker.yaml")
-    ap.add_argument("--data", default="/var/lib/smoker")
+    ap.add_argument("--data", default="/var/lib/SM3k")
     return ap.parse_args()
 
 def fahrenheit(c): return c*9/5 + 32

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-REPO_DIR="/opt/smoker"
+REPO_DIR="/opt/SM3k"
 ENV_DIR="$REPO_DIR/.venv"
 
 sudo systemctl stop smoker.service || true

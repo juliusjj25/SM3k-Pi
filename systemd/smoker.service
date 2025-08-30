@@ -1,13 +1,13 @@
 [Unit]
-Description=Smoker Controller
+Description=SmokeMaster3000
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/smoker
-Environment="PYTHONPATH=/home/pi/smoker"
-ExecStart=/home/pi/smoker/.venv/bin/python -m smoker.main
+WorkingDirectory=/home/pi/SM3k
+Environment="PYTHONPATH=/home/pi/SM3k"
+ExecStart=/home/pi/SM3k/.venv/bin/python -m smoker.main
 Restart=always
 RestartSec=2
 Nice=-10
