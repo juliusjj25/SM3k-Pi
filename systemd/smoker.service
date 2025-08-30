@@ -1,0 +1,18 @@
+[Unit]
+Description=Smoker Controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/smoker
+Environment="PYTHONPATH=/home/pi/smoker"
+ExecStart=/home/pi/smoker/.venv/bin/python -m smoker.main
+Restart=always
+RestartSec=2
+Nice=-10
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=50
+
+[Install]
+WantedBy=multi-user.target

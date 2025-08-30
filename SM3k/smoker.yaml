@@ -1,0 +1,15 @@
+sample_period_s: 1.0
+window_s: 8.0
+setpoint_f: 225
+max_safe_f: 325
+ads:
+  - addr: 0x48
+    channels: [chamber, meat1, meat2, meat3]
+  - addr: 0x49
+    channels: [meat4, meat5, meat6, aux]
+thermistor:
+  r_fixed_ohm: 100000
+  r25_ohm: 100000
+  beta_k: 3950
+gpio:
+  ssr_pin: 17
